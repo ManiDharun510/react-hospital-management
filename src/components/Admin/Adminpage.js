@@ -107,9 +107,8 @@ function Adminpage(){
     return(<>
 
 
-{/* -----------className='a_center ap_pos'--------className='ap_posa'--------------------------------PATIENT DETAILS MODAL-------------------------------------------------------- */}
+{/* ---------------------------------------------------PATIENT DETAILS MODAL-------------------------------------------------------- */}
 
-    {/* <button className='ap_posa' onClick={onLogoutHandler}>Logout</button> */}
     <h1 className='a_center' >Admin page<button className='ap_posa btn btn-danger' onClick={onLogoutHandler}>Logout</button></h1>
 
     <h3>Add Patient</h3>
