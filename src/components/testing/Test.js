@@ -4,11 +4,11 @@ import {useNavigate} from 'react-router-dom';
 import axios from 'axios';
 
 function Test(){
-    const [data, setData] = useState([
-      {name:"mani"},
-      {name:"vini"},
-      {name:"kani"}
-    ]);
+  useEffect(()=>{
+
+  },[]);
+    const [data, setData] = useState("data");
+    
 
     let onchangehandler = (event)=>{
         let name = event.target.name;
@@ -28,7 +28,9 @@ function Test(){
         })
     };
     const [test, settest] = useState("hai");
-
+    useEffect(()=>{
+      setData("gafdga")
+    },[test]);
     const trigger =()=>{  
       settest("bye");
       };
@@ -43,28 +45,10 @@ function Test(){
     };
 
     return(<>
-    <h1>{test}</h1>
-    <button onClick={trigger}>butt</button>
-
-    <p>haha</p>
-    <form>
-      <select name="hai">
-      {
-      data.map((val, index)=>{
-        return(
-        <option key={index}>{val.name}</option>
-      )})
-
-    }
-      </select>
-    </form>
-    <div>{ 
-      data.map((val, index)=>{
-        return(
-        <option key={index}>{val.name}</option>
-      )})
-
-    }</div>
+    <h1>{data}</h1>
+    <button className="btn btn-primary" onClick={()=>{settest("oii")}}>button</button>
+    <Link to='/a' target='_blank'></Link>
+  
 
     {/* <form>
         <input type="text" name="name" onChange={onchangehandler}/>

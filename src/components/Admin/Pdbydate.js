@@ -30,12 +30,12 @@ function Pdbydate(){
 
 
     return(<>
-    <h3 className="">Patient Details By Date</h3>
+    <h3 className="">Show Details By Date</h3>
     
     <form>
     <div className="form-row">
     <div className="form-group col-md-2">
-    <label htmlFor="inputCity">Enter Date</label>
+    <label htmlFor="inputCity">Choose Date</label>
     <input type="date" name="date" onChange={onChangeHandler} className="form-control" id="inputCity"/>
     </div>
     </div>

@@ -64,11 +64,11 @@ function Admin(){
 return(<>
    
 
-<div className="container" >
-        <div className="box">
+<div className="a_container" >
+        
         <form>
-        <p><b>Admin Login</b></p><hr/>
-        <div className="form-group">
+        <h3 className='a_center'><b>Admin Login</b></h3>
+        <div className="form-group ">
         <label htmlFor="exampleInputEmail1">Email</label>
         <input type="email" name="email" className="form-control" onChange={onChangeHandlerLG} aria-describedby="emailHelp" placeholder="Your email"/>                 
         </div>
@@ -79,55 +79,9 @@ return(<>
         <button type="submit" onClick={onSubmitHandlerLG} className="btn btn-primary">Submit</button>
         </form>
         </div>
-</div>  
 
 </>
 
 )
 }
 export default Admin;
-
-
-
-
-
-
-// const onSubmitHandlerSU = (event)=>{
-//         event.preventDefault();
-//         if(!checkingEmptyValidation(input.username) || !minLengthValidation(input.username)){
-//                 alert("NameSU cannot be empty and minlength is 5");
-//                 return;
-//               }
-//         if(!checkingEmptyValidation(input.email) || !minLengthValidation(input.email)){
-//                 alert("Email cannot be empty and minlength is 5");
-//                 return;
-//               }
-//         if(!checkingEmptyValidation(input.password) || !minLengthValidation(input.password)){
-//                 alert("Password cannot be empty and minlength is 5");
-//                 return;
-//               }
-//         axios.post('http://localhost:3000/medregistration', input).then((value)=>{
-//         sessionStorage.setItem("email", input.email);
-//         sessionStorage.setItem("LS", "true");
-//         console.log(value.data);
-//         clearingData();
-//         navigate('/pp');
-// }).catch((error)=>{
-//         console.log(error);
-// });
-// };
-// const clearingData = ()=>{
-        
-// };
-
-// const onChangeHandlerSU = (event)=>{
-//         let name= event.target.name;
-//         let value= event.target.value;
-//         setInput({...input, [name]: value})
-        
-// };
-// const [input, setInput] = useState({
-//         username: "",
-//         email: "",
-//         password: ""
-// });

@@ -22,7 +22,8 @@ function Adminpage(){
 
     const [input, setInput] = useState({
         appio_time:"",
-        confirm_status:""
+        confirm_status:"",
+        status:""
     });
     const onChangeHandlerSU = (event)=>{
         let name= event.target.name;
@@ -106,9 +107,11 @@ function Adminpage(){
     return(<>
 
 
-{/* ---------------------------------------------------PATIENT DETAILS MODAL-------------------------------------------------------- */}
-<button onClick={onLogoutHandler}>Logout</button> 
-    <h1 className='a_center'>Admin page</h1>
+{/* -----------className='a_center ap_pos'--------className='ap_posa'--------------------------------PATIENT DETAILS MODAL-------------------------------------------------------- */}
+
+    {/* <button className='ap_posa' onClick={onLogoutHandler}>Logout</button> */}
+    <h1 className='a_center' >Admin page<button className='ap_posa btn btn-danger' onClick={onLogoutHandler}>Logout</button></h1>
+
     <h3>Add Patient</h3>
     <button type="button" className="btn btn-primary" data-toggle="modal" data-target="#patient">Add Patient</button><br/><br/>
     <button type="button" onClick={()=>{navigate('/pd')}} className="btn btn-primary">View patient</button>
@@ -171,6 +174,15 @@ function Adminpage(){
         <option value="none">-</option>
         <option value="confirmed">Confirmed</option>
         <option value="cancelled">Cancelled</option>
+        </select>
+        </div>
+
+        <div className="form-group">
+        <label>Patient Status</label>
+        <select className="form-control" onChange={onChangeHandlerSU} name="status" id="exampleFormControlSelect1">
+        <option value="none">-</option>
+        <option value="active">Active</option>
+        <option value="inactive">In-active</option>
         </select>
         </div>
 

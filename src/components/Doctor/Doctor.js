@@ -5,8 +5,6 @@ import axios from 'axios';
 import "./Doctor.css";
 
 function Doctor(){
-
-
 //---------------------Login------------------------//
         const navigate = useNavigate();
         const [inputlg, setInputlg] = useState({
@@ -17,7 +15,6 @@ function Doctor(){
                 let value= event.target.value;
                 setInputlg({...inputlg, [name]: value})
                 console.log(inputlg);
-        
         };
         const checkingEmptyValidation=(value)=>{
                 if(value){
@@ -51,18 +48,15 @@ function Doctor(){
 return(<>
    
 
-<div className="container" >
-
-        <div className="box">
+<div className="a_container" >
         <form>
-        <p><b>Doctor Login</b></p><hr/>
+        <h3 className='a_center'><b>Doctor Login</b></h3>
         <div className="form-group">
         <label for="exampleInputEmail1">Email</label>
         <input type="email" name="doctoremail" className="form-control" onChange={onChangeHandlerLG} aria-describedby="emailHelp" placeholder="Your email"/>                 
         </div>
         <button type="submit" onClick={onSubmitHandlerLG} className="btn btn-primary">Submit</button>
         </form>
-        </div>
 </div>  
 
 </>

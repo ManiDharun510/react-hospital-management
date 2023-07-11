@@ -75,7 +75,7 @@ function Patientpage(){
     };
 
     return(<>
-    <h1 className="p_center">Patient Page</h1><br/>
+    <h2 className="p_center">Patient Page <button className='ap_posa btn btn-danger' onClick={onLogoutHandler}>Logout</button></h2><br/>
     <h3 className="p_center">Your Appointments</h3>
     <table className="table table-striped table-dark">
     <thead>
@@ -105,7 +105,7 @@ function Patientpage(){
         <td>{val.date}</td>
         <td>{val.appio_time}</td>
         <td>{val.doctor}</td>
-        <td><button onClick={()=>{editingBindHandler(index)}} data-toggle="modal" data-target="#patient">Edit</button></td>
+        <td><button className="btn btn-warning" onClick={()=>{editingBindHandler(index)}} data-toggle="modal" data-target="#patient">Edit</button></td>
         {/* <td><button onClick={()=>{onDeleteHandler(index)}}>Delete</button></td> */}
         
         </tr>
@@ -133,8 +133,6 @@ function Patientpage(){
     </div>
     </div>
     </div>
-
-    <button onClick={onLogoutHandler}>Logout</button>
     </>)
 }
 export default Patientpage;

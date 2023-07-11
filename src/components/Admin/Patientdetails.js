@@ -23,7 +23,8 @@ function Patientdetails(){
             doctor: "",
             mblno: "",
             name: "",
-            sex: ""
+            sex: "",
+            status:""
     });
     
     const [getId, setId] = useState(-1);
@@ -56,7 +57,8 @@ function Patientdetails(){
             doctor: patientList[index].doctor,
             mblno: patientList[index].mblno,
             name: patientList[index].name,
-            sex: patientList[index].sex
+            sex: patientList[index].sex,
+            status: patientList[index].status
         })
     };
 
@@ -91,7 +93,7 @@ function Patientdetails(){
 
     return(<>
     <h1 className='a_center'>Patient Details</h1>
-    <button className='a_flo_button' onClick={()=>{navigate('/pdd')}}>Sort By Date</button>
+    <button className='a_flo_button' onClick={()=>{navigate('/pdd')}}>Show By Date</button>
     <table className="table table-striped table-dark">
     <thead>
     <tr>
@@ -104,6 +106,7 @@ function Patientdetails(){
       <th scope="col">Date</th>
       <th scope="col">Time</th>
       <th scope="col">Doctor</th>
+      <th scope="col">Patient Status</th>
       <th scope="col">Edit</th>
       <th scope="col">Delete</th>
     </tr>
@@ -121,6 +124,7 @@ function Patientdetails(){
         <td>{val.date}</td>
         <td>{val.appio_time}</td>
         <td>{val.doctor}</td>
+        <td>{val.status}</td>
         <td><button className="btn btn-primary" onClick={()=>{editingBindHandler(index)}} data-toggle="modal" data-target="#patient">Edit</button></td>
         <td><button className="btn btn-danger" onClick={()=>{onDeleteHandler(index)}}>Delete</button></td>
         
@@ -196,6 +200,15 @@ function Patientdetails(){
         <option value="none">-</option>
         <option value="confirmed">Confirmed</option>
         <option value="cancelled">Cancelled</option>
+        </select>
+        </div>
+
+        <div className="form-group">
+        <label>Patient Status</label>
+        <select className="form-control" onChange={onChangeHandlerSU} name="status" id="exampleFormControlSelect1">
+        <option value="none">-</option>
+        <option value="active">Active</option>
+        <option value="inactive">In-active</option>
         </select>
         </div>
 

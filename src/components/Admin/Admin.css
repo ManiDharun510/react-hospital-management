@@ -1,10 +1,17 @@
 .a_center{
     text-align: center;
 }
-/* .a_flo_button{
-    float:top;
+.a_container{
+    margin-top: 10vh;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40vw;
 }
-.a_centerfb{
-    width:50%;
-    text-align: center;
-} */
+.ap_pos{
+    position: relative;
+}
+.ap_posa{
+    margin: 10px 10px;
+    float: right;
+
+}

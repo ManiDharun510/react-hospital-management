@@ -89,6 +89,27 @@ function Doctorpage(){
 
         })
     };
+    const editingBindHandleroverall = (index)=>{
+        setId(index);
+        seteditInput({
+            address: patientDetails[index].address,
+            age: patientDetails[index].age,
+            appio_time:patientDetails[index].appio_time,
+            confirm_status: patientDetails[index].confirm_status,
+            date: patientDetails[index].date,
+            doctor: patientDetails[index].doctor,
+            mblno: patientDetails[index].mblno,
+            name: patientDetails[index].name,
+            sex: patientDetails[index].sex
+        })
+    };
+    const onEditSubmitHandleroverall = ()=>{
+        axios.put(`http://localhost:3000/medregistration/${patientDetails[getId].id}`,{...editInput}).then(()=>{
+            getpatientlistapi();
+        }).catch(()=>{
+
+        })
+    };
     const [editInput, seteditInput] = useState({
         address: "",
             age: "",
@@ -121,11 +142,13 @@ function Doctorpage(){
 
     return(<>
 
-    <h1>Doctor page</h1>
-    {toggle ? <button onClick={toggleswitch}>Overall Schedule</button> : <button onClick={toggleswitch1}>Today Schedule</button>}
+    <h2 className='a_center'>Doctor page<button className='ap_posa btn btn-danger' onClick={onLogoutHandler}>Logout</button></h2>
+    {toggle ? <button  onClick={toggleswitch}>Overall Schedule</button> : <button onClick={toggleswitch1}>Today Schedule</button>}
 
     {toggle ? 
+    // ------------------Todays Patient List---------------------------//
     <table className="table table-striped table-dark">
+    <caption>Today's Schedule</caption>
     <thead>
     <tr>
       <th scope="col">#</th>
@@ -153,15 +176,16 @@ function Doctorpage(){
         <td>{val.date}</td>
         <td>{val.appio_time}</td>
         <td>{val.doctor}</td>
-        <td><button onClick={()=>{editingBindHandler(index)}} data-toggle="modal" data-target="#patient">Edit</button></td>
+        <td><button className="btn btn-warning" onClick={()=>{editingBindHandler(index)}} data-toggle="modal" data-target="#patient">Edit</button></td>
         </tr>
         </>)
     })}
     </tbody>
     </table>
         :
-    
+    // ------------------Overall Patient List---------------------------//
     <table className="table table-striped table-dark">
+    <caption>Overall Schedule</caption>
     <thead>
     <tr>
       <th scope="col">#</th>
@@ -173,7 +197,7 @@ function Doctorpage(){
       <th scope="col">Date</th>
       <th scope="col">Time</th>
       <th scope="col">Doctor</th>
-      {/* <th scope="col">Edit</th> */}
+      <th scope="col">Edit</th>
     </tr>
     </thead>
     <tbody>
@@ -189,14 +213,14 @@ function Doctorpage(){
         <td>{val.date}</td>
         <td>{val.appio_time}</td>
         <td>{val.doctor}</td>
-        {/* <td><button onClick={()=>{editingBindHandler(index)}} data-toggle="modal" data-target="#patient">Edit</button></td> */}
+        <td><button className="btn btn-warning" onClick={()=>{editingBindHandleroverall(index)}} data-toggle="modal" data-target="#modaloverall">Edit</button></td>
         </tr>
         </>)
     })}
     </tbody>
     </table>}
 
-
+    {/* // ------------------Todays patient list modal   ----------------------------------// */}
     <div className="modal fade bd-example-modal-md" id="patient" tabIndex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
     <div className="modal-dialog modal-md">
     <div className="modal-content">  
@@ -217,8 +241,26 @@ function Doctorpage(){
     </div>
     </div>
 
-    <button onClick={onLogoutHandler}>Logout</button> 
+    {/* // ------------------Overall patiet list model---------------------------// */}
+    <div className="modal fade bd-example-modal-md" id="modaloverall" tabIndex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div className="modal-dialog modal-md">
+    <div className="modal-content">  
+    <form className="p_form">
+    <div className="form-group"></div>
 
+    <div className="form-group">
+        <label>Appointment Status</label>
+        <select className="form-control" onChange={onChangeHandlerSU} name="confirm_status" value={editInput.confirm_status} id="exampleFormControlSelect1">
+        <option value="none">-</option>
+        <option value="Confirmed by Doctor">Confirmed</option>
+        <option value="Cancelled by Doctor">Cancelled</option>
+        </select>
+    </div>
+    <button onClick={onEditSubmitHandleroverall} className="btn btn-primary">Submit</button>
+    </form>    
+    </div>
+    </div>
+    </div>
     </>)
 }
 export default Doctorpage;
