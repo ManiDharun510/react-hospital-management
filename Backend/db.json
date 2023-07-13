@@ -5,6 +5,72 @@
       "firstName": "akash",
       "email": "akash@gmail.com",
       "password": "12345"
+    },
+    {
+      "username": "Manigandan",
+      "email": "mani@gmail.com",
+      "password": "123456",
+      "id": 2
+    },
+    {
+      "name": "Kiruba",
+      "email": "kiruba@gmail.com",
+      "password": "987654",
+      "id": 3
+    },
+    {
+      "username": "Manigandan",
+      "email": "mani@gmail.com",
+      "password": "123456",
+      "id": 4
+    },
+    {
+      "username": "Manigandan",
+      "email": "mani@gmail.com",
+      "password": "123456",
+      "id": 5
+    },
+    {
+      "username": "Dharun",
+      "email": "dharun@gmail.com",
+      "password": "123456",
+      "id": 6
+    },
+    {
+      "firstName": "kiruba",
+      "email": "kiruba@gmail.com",
+      "password": "1234",
+      "id": 7
+    },
+    {
+      "username": "dharunraj",
+      "email": "dharundharun@gmail.com",
+      "password": "123456",
+      "id": 8
+    },
+    {
+      "username": "Hari Haran",
+      "email": "hari@gmail.com",
+      "password": "123456",
+      "id": 9
+    },
+    {
+      "username": "dvdvdd",
+      "email": "dvdvd@gmail.com",
+      "password": "123456",
+      "id": 10
+    },
+    {
+      "username": "yogalakshmi",
+      "email": "yogu@gmail.com",
+      "password": "123456",
+      "id": 11
+    },
+    {
+      "username": "Kanna",
+      "email": "kanna@gmail.com",
+      "password": "123456",
+      "id": 12
     }
   ],
   "book": [
@@ -16,6 +82,56 @@
       "eDate": "2023-04-01",
       "email": "mani@gmail.com",
       "id": 5
+    },
+    {
+      "eName": "Moviedum dum",
+      "eCat": "Entertainment",
+      "eAmount": "10",
+      "ePaid": "PayTm",
+      "eDate": "2023-04-12",
+      "email": "mani@gmail.com",
+      "id": 6
+    },
+    {
+      "eName": "Moviedum dum",
+      "eCat": "Entertainment",
+      "eAmount": "10",
+      "ePaid": "PayTm",
+      "eDate": "2023-04-12",
+      "email": "mani@gmail.com",
+      "id": 7
+    },
+    {
+      "eName": "Moviedum dum",
+      "eCat": "Entertainment",
+      "eAmount": "10",
+      "ePaid": "PayTm",
+      "eDate": "2023-04-12",
+      "email": "mani@gmail.com",
+      "id": 8
+    },
+    {
+      "eName": "Therla",
+      "eCat": "Entertainment",
+      "eAmount": "10",
+      "ePaid": "PayTm",
+      "eDate": "2023-04-12",
+      "email": "mani@gmail.com",
+      "id": 9
+    },
+    {
+      "bookName": "kirumi1",
+      "price": 0,
+      "available": false,
+      "email": "kiruba@gmail.com",
+      "id": 10
+    },
+    {
+      "bookName": "kirumi1",
+      "price": 0,
+      "available": false,
+      "email": "kiruba@gmail.com",
+      "id": 11
     }
   ],
   "ans": [],
@@ -43,6 +159,109 @@
       "Author": "mani",
       "email": "mani@gmail.com",
       "id": 8
+    },
+    {
+      "que": "How to edit?",
+      "ans": [
+        {
+          "answer": "Using premier pro",
+          "author": "hari"
+        },
+        {
+          "answer": "through skills",
+          "author": "mani"
+        }
+      ],
+      "Author": "hari",
+      "email": "hari@gmail.com",
+      "id": 9
+    },
+    {
+      "que": "new question?",
+      "ans": [
+        {
+          "answer": "new answer",
+          "author": "mani"
+        },
+        {
+          "answer": "hai yogu",
+          "author": "yogu"
+        }
+      ],
+      "Author": "mani",
+      "email": "mani@gmail.com",
+      "id": 10
+    },
+    {
+      "que": "new ques?",
+      "ans": [
+        {
+          "answer": "latest answer",
+          "author": "yogu"
+        }
+      ],
+      "Author": "yogu",
+      "email": "yogu@gmail.com",
+      "id": 11
+    },
+    {
+      "que": "What is Quora digest and how do I get it?",
+      "ans": [
+        {
+          "answer": "Ummmmm 🤔 my story is very simple . One month ago a mail came to my phone 📱 I saw it and it was written ‘Is Jin married ? ’ I was amazed then I clicked on it and a web page opened and on that web page I got a message ‘Welcome to Quora digest ’ and from then I know Quora digest and now I have my own space thx to Quora digest very very much 😊☺️",
+          "author": "mani"
+        },
+        {
+          "answer": "Quora Digest is like a newspaper. The best answers get sent out to people, and it is sent out to everyone's email (with registered Quora accounts) weekly.\n\nIf you get an answer in the Digest, you will get a notification, stating which answer and how many people it's been sent to. You could receive multiple notifications if it sent out again. For example, I got 3. First, it was 3000+, then 16000+, then finally 120000+.",
+          "author": "mani"
+        }
+      ],
+      "Author": "mani",
+      "email": "mani@gmail.com",
+      "id": 12
+    },
+    {
+      "que": "Hi mani?",
+      "ans": [
+        {
+          "answer": "Hi....",
+          "author": "mani"
+        }
+      ],
+      "Author": "mani",
+      "email": "mani@gmail.com",
+      "id": 13
+    },
+    {
+      "que": "New question?",
+      "ans": [
+        {
+          "answer": "New answer",
+          "author": "mani"
+        }
+      ],
+      "Author": "mani",
+      "email": "mani@gmail.com",
+      "id": 14
+    },
+    {
+      "que": "last Quora?",
+      "ans": [],
+      "email": "mani@gmail.com",
+      "Author": "mani",
+      "id": 15
+    },
+    {
+      "que": "Best food to eat in summer?",
+      "ans": [
+        {
+          "answer": "Curd rice with pickle is the best combo for summer......",
+          "author": "mani"
+        }
+      ],
+      "Author": "mani",
+      "email": "mani@gmail.com",
+      "id": 16
     }
   ],
   "medregistration": [
